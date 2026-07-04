@@ -1,0 +1,11 @@
+searchBox.addEventListener("input", () => {
+
+    const value = searchBox.value.trim();
+
+    if (value) {
+        getMovies(SEARCH + encodeURIComponent(value));
+    } else {
+        getMovies(TRENDING);
+    }
+
+});
